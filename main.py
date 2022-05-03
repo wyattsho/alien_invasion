@@ -4,6 +4,7 @@ from settings import Settings
 from ship import Ship
 import game_functions as gf
 from pygame.sprite import Group
+from button import Button
 
 
 # define main game function
@@ -16,6 +17,8 @@ def alien_invasion():
     screen = pygame.display.set_mode((settings.screen_width, settings.screen_height))
     #
     pygame.display.set_caption('Alien Invasion')
+
+    play_button = Button(settings, screen, "Play")
     # add ship
     ship = Ship(screen)
 
@@ -30,7 +33,7 @@ def alien_invasion():
         # access event handler as function
         gf.check_events(settings, screen, ship, bullets)
        # updates the screen from game functions
-        gf.update_screen(settings, screen, ship, aliens, bullets)
+        gf.update_screen(settings, screen, ship, aliens, bullets, play_button)
 
         #
 

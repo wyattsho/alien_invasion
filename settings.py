@@ -16,3 +16,5 @@ class Settings():
         self.bullet_color = (255, 0, 0)
         self.bullet_speed = 2
         self.bullet_limit = 3
+
+        self.game_active = False

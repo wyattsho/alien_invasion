@@ -35,10 +35,11 @@ def check_events(settings, screen, ship, bullets):
                 ship.moving_down = False
 
 
-def update_screen(settings,screen,ship, aliens, bullets):
+def update_screen(settings,screen,ship, aliens, bullets, play_button):
     # color screen with background color
     screen.fill(settings.bg_color)
-
+    if not settings.game_active:
+        play_button.draw_button()
     limit_bullets(bullets)
     for bullet in bullets.sprites():
         bullet.draw_bullets()
