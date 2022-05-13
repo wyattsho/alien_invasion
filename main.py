@@ -31,7 +31,7 @@ def alien_invasion():
     while True:
 
         # access event handler as function
-        gf.check_events(settings, screen, ship, bullets)
+        gf.check_events(settings, screen, ship, bullets, play_button)
        # updates the screen from game functions
         gf.update_screen(settings, screen, ship, aliens, bullets, play_button)
 

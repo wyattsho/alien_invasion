@@ -18,3 +18,5 @@ class Settings():
         self.bullet_limit = 3
 
         self.game_active = False
+
+        self.score = 0
